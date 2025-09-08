@@ -40,4 +40,3 @@ model.translate(sentence))
 
 ```
 "Das Wetter ist heute schön."
-```
