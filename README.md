@@ -33,80 +33,11 @@ This project implements a **Neural Machine Translation (NMT) system** for transl
    * Translation loss: Cross-entropy between predicted and target tokens.
    * GAN loss: Binary cross-entropy to fool the discriminator.
    * Final loss = λ \* translation loss + (1-λ) \* adversarial loss.
-
-## 📊 Dataset
-
-* **Corpus**: 50,000 parallel English–German sentence pairs.
-* **Preprocessing**:
-
-  * Tokenization (using `spacy` or `nltk`).
-  * Padding and truncation for uniform sequence lengths.
-  * Vocabulary size limited to top 30,000 tokens.
-
-## ⚙️ Installation
-
-```bash
-git clone https://github.com/YourUsername/NMT-GAN-Translation.git
-cd NMT-GAN-Translation
-pip install -r requirements.txt
-```
-
-Dependencies:
-
-* Python 3.x
-* PyTorch
-* NumPy, Pandas
-* NLTK / SpaCy
-* SacreBLEU (for evaluation)
-
-## 🚀 Training
-
-### Train Encoder–Decoder Model
-
-```bash
-python train_seq2seq.py --epochs 20 --batch_size 64 --lr 0.001
-```
-
-### Train with GAN Component
-
-```bash
-python train_gan.py --epochs 20 --batch_size 64 --lr 0.0005 --lambda 0.8
-```
-
-## 📈 Results
-
-* **BLEU Score**: Achieved **18.5** on the test set.
-* **Speed**: Processes 8–10 word sentences in under **2 seconds** on a T4 GPU.
-* **Loss Curves**:
-
-  * Seq2Seq baseline converges faster but generates rigid translations.
-  * GAN-enhanced model produces more fluent, human-like German text.
-
-## 🖥️ Inference Example
-
-```python
-from translate import Translator
-
-model = Translator.load("models/nmt_gan.pt")
-sentence = "The weather is nice today."
-print(model.translate(sentence))
+model.translate(sentence))
 ```
 
 **Output:**
 
 ```
 "Das Wetter ist heute schön."
-```
-
-## 📂 Project Structure
-
-```
-├── data/                # Training data
-├── models/              # Saved models
-├── scripts/             # Preprocessing & utilities
-├── train_seq2seq.py     # Baseline training
-├── train_gan.py         # GAN-based training
-├── translate.py         # Inference pipeline
-├── requirements.txt     
-└── README.md            
 ```
