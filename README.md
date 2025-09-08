@@ -34,9 +34,3 @@ This project implements a **Neural Machine Translation (NMT) system** for transl
    * GAN loss: Binary cross-entropy to fool the discriminator.
    * Final loss = λ \* translation loss + (1-λ) \* adversarial loss.
 model.translate(sentence))
-```
-
-**Output:**
-
-```
-"Das Wetter ist heute schön."
