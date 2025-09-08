@@ -1,8 +1,3 @@
-# Neural-Machine-Translation-Project
-Got it. I’ll draft you a **technical, well-structured README** for your Neural Machine Translation (NMT) project (English → German, LSTM + Leaky GAN), similar in depth to top GitHub repos. Here’s a full version you can directly adapt:
-
----
-
 # Neural Machine Translation (English → German)
 
 This project implements a **Neural Machine Translation (NMT) system** for translating English sentences into German. It combines a **sequence-to-sequence model with LSTMs** and an **adversarial Leaky GAN setup** to improve translation fluency and robustness beyond standard encoder-decoder approaches.
